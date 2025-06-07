@@ -116,4 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# (GJ) the above are "mostly" what was given in ubuntu
+# the below are "custom" stuff
+
+# homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
