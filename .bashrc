@@ -119,6 +119,32 @@ fi
 # (GJ) the above are "mostly" what was given in ubuntu
 # the below are "custom" stuff
 
+# aliases
+alias so="source ~/.bashrc"
+alias q="exit"
+alias c="clear"
+alias ff="fastfetch"
+alias cf="c & ff"
+
+# dotfile management
+DOTFILES_HOME=$HOME
+DOTFILES_GIT_DIR=.ubuntu_dotfiles
+alias dotfiles="git --git-dir=$DOTFILES_HOME/$DOTFILES_GIT_DIR/ --work-tree=$DOTFILES_HOME"
+
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# Set up yazi - y shell wrapper
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
+}
+
+# Set up zoxide - z command and zi [i]nteractive command
+eval "$(zoxide init bash)"
