@@ -125,6 +125,11 @@ alias q="exit"
 alias c="clear"
 alias ff="fastfetch"
 alias cf="c & ff"
+alias vim="nvim"
+alias lg="lazygit"
+
+# aliases - dotfiles
+alias nvimrc="cd ~/.config/nvim"
 
 # dotfile management
 DOTFILES_HOME=$HOME
