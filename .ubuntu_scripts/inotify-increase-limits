@@ -12,7 +12,9 @@ echo "current ulimit -n"
 ulimit -n
 
 sudo sysctl -w fs.inotify.max_user_instances=1024
-sudo sysctl -w fs.inotify.max_user_watches=1048576
+# sudo sysctl -w fs.inotify.max_user_watches=1048576
+sudo sysctl -w fs.inotify.max_user_watches=2097152
+# sudo sysctl -w fs.inotify.max_user_watches=4194304
 
 echo "new max_user_instances"
 cat /proc/sys/fs/inotify/max_user_instances
