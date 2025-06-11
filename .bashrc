@@ -119,14 +119,22 @@ fi
 # (GJ) the above are "mostly" what was given in ubuntu
 # the below are "custom" stuff
 
+# exports (eg. $EDITOR)
+export EDITOR=nvim
+
 # aliases
 alias so="source ~/.bashrc"
 alias q="exit"
 alias c="clear"
+
+# aliases - tools
 alias ff="fastfetch"
 alias cf="c & ff"
-alias vim="nvim"
+# alias vim="nvim"
 alias lg="lazygit"
+
+# aliases - ubuntu specific
+alias off="gnome-session-quit --power-off"
 
 # aliases - dotfiles
 alias nvimrc="cd ~/.config/nvim"
