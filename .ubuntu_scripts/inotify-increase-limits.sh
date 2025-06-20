@@ -13,6 +13,7 @@ ulimit -n
 
 # user instances (default: 128)
 sudo sysctl -w fs.inotify.max_user_instances=1024
+# sudo sysctl -w fs.inotify.max_user_instances=2048
 
 # user watches (default 65536)
 sudo sysctl -w fs.inotify.max_user_watches=1048576
@@ -27,4 +28,3 @@ cat /proc/sys/fs/inotify/max_user_watches
 
 echo "new ulimit -n"
 ulimit -n
-
