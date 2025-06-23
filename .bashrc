@@ -163,6 +163,9 @@ alias ga="git add"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gc="git commit -m"
+alias gf="git fetch"
+alias gph="git push"
+alias gpl="git pull"
 
 # dotfile management
 DOTFILES_HOME=$HOME
@@ -173,6 +176,9 @@ alias da="dotfiles add"
 alias dd="dotfiles diff"
 alias dds="dotfiles diff --staged"
 alias dc="dotfiles commit -m"
+alias df="dotfiles fetch"
+alias dph="dotfiles push"
+alias dpl="dotfiles pull"
 
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
