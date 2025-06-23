@@ -134,11 +134,18 @@ alias c="clear"
 # aliases - tools
 alias ff="fastfetch"
 alias cf="c & ff"
-# alias vim="nvim"
+alias v="nvim"
 alias lg="lazygit"
+alias tm="tmux"
+alias tms="tmux-sessionizer" # /usr/bin/tmux-sessionizer -> /opt/tmux-sessionizer/tmux-sessionizer -> <the repo where the script is located>/tmux-sessionizer
+
+# use neovim for reading man pages
+export MANPAGER='nvim +Man!'
 
 # aliases - ubuntu specific
 alias off="gnome-session-quit --power-off"
+alias restart="gnome-session-quit --reboot"
+alias logout="gnome-session-quit --logout"
 
 # aliases - dotfiles
 alias nvimrc="cd ~/.config/nvim"
@@ -149,10 +156,23 @@ alias ii="inotifyutil set" # [i]notify [i]ncrease
 alias is="inotifyutil set"
 alias ig="inotifyutil get"
 
+# aliases - git
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gc="git commit -m"
+
 # dotfile management
 DOTFILES_HOME=$HOME
 DOTFILES_GIT_DIR=.ubuntu_dotfiles
 alias dotfiles="git --git-dir=$DOTFILES_HOME/$DOTFILES_GIT_DIR/ --work-tree=$DOTFILES_HOME"
+alias ds="dotfiles status"
+alias da="dotfiles add"
+alias dd="dotfiles diff"
+alias dds="dotfiles diff --staged"
+alias dc="dotfiles commit -m"
 
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
