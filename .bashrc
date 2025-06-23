@@ -118,8 +118,9 @@ fi
 # (GJ) the above are "mostly" what was given in ubuntu
 # the below are "custom" stuff
 
-# exports (eg. $EDITOR)
+# exports
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
 
 # env secrets that should not be in version control
 if [ -f "$HOME/.ubuntu_env" ]; then
@@ -138,9 +139,6 @@ alias v="nvim"
 alias lg="lazygit"
 alias tm="tmux"
 alias tms="tmux-sessionizer" # /usr/bin/tmux-sessionizer -> /opt/tmux-sessionizer/tmux-sessionizer -> <the repo where the script is located>/tmux-sessionizer
-
-# use neovim for reading man pages
-export MANPAGER='nvim +Man!'
 
 # aliases - ubuntu specific
 alias off="gnome-session-quit --power-off"
