@@ -137,7 +137,15 @@ alias ff="fastfetch"
 alias cf="c & ff"
 alias v="nvim"
 alias lg="lazygit"
-alias tm="tmux"
+
+# aliases - tmux
+alias tm="tmux new -s"       # create tmux with session name
+alias tmm="tmux new -s misc" # create tmux with session name "misc"
+alias tma="tmux a"           # [a]ttatch tmux most recent session
+alias tmat="tmux a -t"       # [a]ttatch tmux to [t]arget session name
+alias tml="tmux ls"          # [l]ist all sessions
+alias tmls="tml"
+alias tmk="tmux kill-server" # [k]ill all sessions
 alias tms="tmux-sessionizer" # /usr/bin/tmux-sessionizer -> /opt/tmux-sessionizer/tmux-sessionizer -> <the repo where the script is located>/tmux-sessionizer
 
 # aliases - ubuntu specific
@@ -204,3 +212,6 @@ export NVM_DIR="$HOME/.nvm"
 # golang setup
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin # for "global" installs via `go install <package>@<version>`
+
+# workflow scripts (depends on everything else set up above)
+alias s="~/start.sh"
