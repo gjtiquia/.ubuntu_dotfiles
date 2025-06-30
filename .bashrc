@@ -138,6 +138,11 @@ alias cf="c & ff"
 alias v="nvim"
 alias lg="lazygit"
 
+# aliases - screensavers
+alias cm="cmatrix"
+alias cb="cbonsai -li -L 64"
+alias cn="nyancat -n"
+
 # aliases - tmux
 alias tm="tmux new -s"       # create tmux with session name
 alias tmm="tmux new -s misc" # create tmux with session name "misc"
