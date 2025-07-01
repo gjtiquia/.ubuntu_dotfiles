@@ -1,0 +1,13 @@
+
+# config file for readline
+# (bash uses readline under-the-hood)
+
+# vim motions
+set editing-mode vi
+
+# show vi mode (normal/insert)
+set show-mode-in-prompt On
+set vi-cmd-mode-string [C]|
+set vi-ins-mode-string [I]|
+
+
