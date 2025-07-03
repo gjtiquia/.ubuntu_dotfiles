@@ -191,6 +191,13 @@ alias df="dotfiles fetch"
 alias dph="dotfiles push"
 alias dpl="dotfiles pull"
 
+# aliases - gemini
+alias gemini-pro="gemini -m 'gemini-2.5-pro'"
+alias gemini-flash="gemini -m 'gemini-2.5-flash'"
+
+# aliases - project specific
+alias opencode="bun run ~/Documents/SelfProjects/opencode/packages/opencode/src/index.ts"
+
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
