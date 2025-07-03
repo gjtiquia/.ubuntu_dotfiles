@@ -4,7 +4,7 @@
 # - directories exist
 # - alias exist
 
-echo "[BOOTING UP WORKFLOW]"
+echo "[BOOTING UP TMUX]"
 
 echo "[misc] creating new session"
 cd
@@ -49,6 +49,29 @@ tmux send-keys "y" C-m
 
 echo "[editor] setting window 1 as active window"
 tmux select-window -t 1
+
+echo "[BOOTING UP BROWSERS]"
+cd
+zen --profile /home/gjtiquia/.zen/7gdo0vij.gjtiquia >/dev/null 2>&1 &
+zen --profile /home/gjtiquia/.zen/wb02wm9b.gjtiquia-9cat/ >/dev/null 2>&1 &
+zen --profile /home/gjtiquia/.zen/74ngvt8g.gjtiquia-public/ >/dev/null 2>&1 &
+
+echo "[BOOTING UP OBSIDIAN]"
+cd
+obsidian >/dev/null 2>&1 &
+
+echo "[BOOTING UP MESSAGING]" # whatsapp PWA and signal
+cd
+/snap/bin/chromium --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm >/dev/null 2>&1 &
+signal-desktop >/dev/null 2>&1 &
+
+echo "[BOOTING UP SOURCEGIT]"
+cd
+sourcegit >/dev/null 2>&1 &
+
+echo "[BOOTING UP UNITY EDITOR]"
+cd
+unityhub >/dev/null 2>&1 &
 
 echo "[9cat] attaching"
 tmux attach -t 9cat
