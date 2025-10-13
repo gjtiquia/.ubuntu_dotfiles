@@ -139,19 +139,9 @@ alias v="nvim"
 alias lg="lazygit"
 
 # aliases - screensavers
-alias cm="cmatrix"
-alias cb="cbonsai -li -L 64"
-alias cn="nyancat -n"
-
-# aliases - tmux
-alias tm="tmux new -s"       # create tmux with session name
-alias tmm="tmux new -s misc" # create tmux with session name "misc"
-alias tma="tmux a"           # [a]ttatch tmux most recent session
-alias tmat="tmux a -t"       # [a]ttatch tmux to [t]arget session name
-alias tml="tmux ls"          # [l]ist all sessions
-alias tmls="tml"
-alias tmk="tmux kill-server" # [k]ill all sessions
-alias tms="tmux-sessionizer" # /usr/bin/tmux-sessionizer -> /opt/tmux-sessionizer/tmux-sessionizer -> <the repo where the script is located>/tmux-sessionizer
+alias cmatrix="cmatrix"
+alias cbonsai="cbonsai -li -L 64"
+alias nyancat="nyancat -n"
 
 # aliases - ubuntu specific
 alias off="gnome-session-quit --power-off"
@@ -167,29 +157,10 @@ alias ii="inotifyutil set" # [i]notify [i]ncrease
 alias is="inotifyutil set"
 alias ig="inotifyutil get"
 
-# aliases - git
-alias g="git"
-alias gs="git status"
-alias ga="git add"
-alias gd="git diff"
-alias gds="git diff --staged"
-alias gc="git commit -m"
-alias gf="git fetch"
-alias gph="git push"
-alias gpl="git pull"
-
 # dotfile management
 DOTFILES_HOME=$HOME
 DOTFILES_GIT_DIR=.ubuntu_dotfiles
 alias dotfiles="git --git-dir=$DOTFILES_HOME/$DOTFILES_GIT_DIR/ --work-tree=$DOTFILES_HOME"
-alias ds="dotfiles status"
-alias da="dotfiles add"
-alias dd="dotfiles diff"
-alias dds="dotfiles diff --staged"
-alias dc="dotfiles commit -m"
-alias df="dotfiles fetch"
-alias dph="dotfiles push"
-alias dpl="dotfiles pull"
 
 # aliases - gemini
 alias gemini-pro="gemini -m 'gemini-2.5-pro'"
