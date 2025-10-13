@@ -22,7 +22,6 @@ if [[ ! -z $1 ]]; then
         echo "use -h or --help to see available args"
         exit
     fi
-
 fi
 
 setup_tmux() {
@@ -34,62 +33,47 @@ setup_tmux() {
     tmux send-keys "c" C-m      # clearing is necessary or else will show the commands below
     tmux send-keys "ff" C-m
 
-    echo "[9cat] creating new session"
-    cd ~/Documents/UnityProjects/9Cat-2d-2/
-    tmux new-session -d -s 9cat
+    echo "[project] creating new session"
+    cd ~/Documents/SelfProjects/some-project
+    tmux new-session -d -s cityu
 
-    echo "[9cat][window 1] setting up neovim"
+    echo "[project][window 1] setting up neovim"
     # tmux send-keys "nvim" C-m
     tmux send-keys "c" C-m
     tmux send-keys "ff" C-m
     tmux send-keys "ii" # sudo command for the user to decide if need to run
 
-    echo "[9cat][window 2] setting up lazygit"
+    echo "[project][window 2] setting up lazygit"
     tmux new-window
     tmux send-keys "lg" C-m
 
-    echo "[9cat] setting window 1 as active window"
-    tmux select-window -p
-
-    echo "[editor] creating new session"
-    cd ~/Documents/UnityProjects/9cat-2d-level-editor/
-    tmux new-session -d -s editor
-
-    echo "[editor][window 1] setting up neovim"
-    # tmux send-keys "nvim" C-m
-    tmux send-keys "c" C-m
-    tmux send-keys "ff" C-m
-    tmux send-keys "ii 2"
-
-    echo "[editor][window 2] setting up lazygit"
+    echo "[project][window 3] setting up cursor-agent"
     tmux new-window
-    tmux send-keys "lg" C-m
+    tmux send-keys "cursor-agent"
 
-    echo "[editor][window 3] setting up yazi"
+    echo "[project][window 4] setting up ssh"
     tmux new-window
-    tmux send-keys "y" C-m
+    tmux send-keys "ssh some-user@some-ip-address"
 
-    echo "[editor] setting window 1 as active window"
+    echo "[project] setting window 1 as active window"
     tmux select-window -t 1
 }
 
 attach_tmux() {
-    echo "[9cat] attaching"
-    tmux attach -t 9cat
+    echo "[misc] attaching"
+    tmux attach -t misc
 }
 
 setup_apps() {
     echo "[BOOTING UP BROWSERS]"
     cd
     zen --profile /home/gjtiquia/.zen/7gdo0vij.gjtiquia >/dev/null 2>&1 &
-    zen --profile /home/gjtiquia/.zen/wb02wm9b.gjtiquia-9cat/ >/dev/null 2>&1 &
-    # zen --profile /home/gjtiquia/.zen/74ngvt8g.gjtiquia-public/ >/dev/null 2>&1 &
 
     echo "[BOOTING UP OBSIDIAN]"
     cd
     obsidian >/dev/null 2>&1 &
 
-    echo "[BOOTING UP MESSAGING]" # whatsapp PWA and signal
+    echo "[BOOTING UP MESSAGING APPS]" # whatsapp PWA and signal
     cd
     /snap/bin/chromium --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm >/dev/null 2>&1 &
     signal-desktop >/dev/null 2>&1 &
