@@ -35,7 +35,7 @@ setup_tmux() {
 
     echo "[project] creating new session"
     cd ~/Documents/SelfProjects/some-project
-    tmux new-session -d -s cityu
+    tmux new-session -d -s project
 
     echo "[project][window 1] setting up neovim"
     # tmux send-keys "nvim" C-m
