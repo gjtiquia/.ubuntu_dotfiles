@@ -199,6 +199,3 @@ source /home/gjtiquia/.local/share/bash-completion/completions/deno.bash
 # golang setup
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin # for "global" installs via `go install <package>@<version>`
-
-# workflow scripts (depends on everything else set up above)
-alias s="~/start.sh" # typically symlinked to a script in ~/.ubuntu_scripts/
