@@ -128,13 +128,11 @@ if [ -f "$HOME/.ubuntu_env" ]; then
 fi
 
 # aliases
-alias so="source ~/.bashrc"
 alias q="exit"
 alias c="clear"
 
 # aliases - tools
 alias ff="fastfetch"
-alias cf="c & ff"
 alias v="nvim"
 alias lg="lazygit"
 
@@ -161,13 +159,6 @@ alias ig="inotifyutil get"
 DOTFILES_HOME=$HOME
 DOTFILES_GIT_DIR=.ubuntu_dotfiles
 alias dotfiles="git --git-dir=$DOTFILES_HOME/$DOTFILES_GIT_DIR/ --work-tree=$DOTFILES_HOME"
-
-# aliases - gemini
-alias gemini-pro="gemini -m 'gemini-2.5-pro'"
-alias gemini-flash="gemini -m 'gemini-2.5-flash'"
-
-# aliases - project specific
-alias opencode="bun run ~/Documents/SelfProjects/opencode/packages/opencode/src/index.ts"
 
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -199,3 +190,6 @@ source /home/gjtiquia/.local/share/bash-completion/completions/deno.bash
 # golang setup
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin # for "global" installs via `go install <package>@<version>`
+
+# bun global installs setup
+export PATH="/home/gjtiquia/.bun/bin:$PATH"
