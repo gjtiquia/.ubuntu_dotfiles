@@ -155,6 +155,9 @@ alias ii="inotifyutil set" # [i]notify [i]ncrease
 alias is="inotifyutil set"
 alias ig="inotifyutil get"
 
+# aliases - tmux
+alias tn="~/.tmux/tmux-new.sh"
+
 # dotfile management
 DOTFILES_HOME=$HOME
 DOTFILES_GIT_DIR=.ubuntu_dotfiles
@@ -193,3 +196,9 @@ export PATH=$PATH:$HOME/go/bin # for "global" installs via `go install <package>
 
 # bun global installs setup
 export PATH="/home/gjtiquia/.bun/bin:$PATH"
+
+# opencode
+export PATH=/home/gjtiquia/.opencode/bin:$PATH
+
+# ifg setup
+eval "$(ifg --sh)"
